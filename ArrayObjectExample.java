@@ -28,10 +28,25 @@ public class ArrayObjectExample {
     students[1] = s2;
     students[2] = s3;
 
-    for (int i = 0; i < students.length; i++) {
-      System.out.println(students[i].name + " : " + students[i].marks);
+    // for (int i = 0; i < students.length; i++) {
+    // System.out.println(students[i].name + " : " + students[i].marks);
 
+    // }
+
+    for (Student stud : students) {
+      System.out.println(stud.name + " :" + stud.marks);
     }
+
+    // int nums[]= new int[4];
+    // nums[0]=4;
+    // nums[1]=42;
+    // nums[2]=43;
+    // nums[3]=44;
+
+    // for(int n :nums){
+    // System.out.println(n);
+
+    // }
 
   }
 

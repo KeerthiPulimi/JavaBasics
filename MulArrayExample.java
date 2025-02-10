@@ -7,7 +7,7 @@ public class MulArrayExample {
 
     // Fill the array with random values (0 to 99)
     for (int i = 0; i < num.length; i++) {
-      for (int j = 0; j < num[i].length; j++) { // ✅ Corrected
+      for (int j = 0; j < num[i].length; j++) { // Corrected
         num[i][j] = (int) (Math.random() * 10);
       }
     }
@@ -15,8 +15,8 @@ public class MulArrayExample {
     System.out.println("------ Printing Again ------");
 
     // Print the array again
-    for (int i = 0; i < num.length; i++) { // ✅ Use num.length
-      for (int j = 0; j < num[i].length; j++) { // ✅ Use num[i].length
+    for (int i = 0; i < num.length; i++) { // Use num.length
+      for (int j = 0; j < num[i].length; j++) { // Use num[i].length
         System.out.print(num[i][j] + " ");
       }
       System.out.println();
