@@ -22,10 +22,17 @@ class Mobile {
 
   }
 
+  public void show1(Mobile obj) {
+    System.out.println(obj.brand + ":" + obj.price + ":" + name);
+
+  }
+
 }
 
 public class StaticExample {
   public static void main(String[] args) {
+
+    // Class.forName("Mobile");
 
     Mobile obj1 = new Mobile();
     obj1.brand = "vivo";
@@ -33,16 +40,16 @@ public class StaticExample {
     // obj1.name = "smartphone";
     Mobile.name = "smartphone";
 
-    // // Mobile obj2 = new Mobile();
-    // // obj2.brand = "apple";
-    // // obj2.price = 222000;
-    // // // obj2.name = "ios";
-    // // // Mobile.name = "ios";
+    Mobile obj2 = new Mobile();
+    obj2.brand = "apple";
+    obj2.price = 222000;
+    // obj2.name = "ios";
+    Mobile.name = "ios";
 
-    // // obj1.show();
-    // // obj2.show();
+    obj1.show();
+    obj2.show();
 
-    Mobile obj3 = new Mobile();
+    // Mobile obj3 = new Mobile();
 
   }
 

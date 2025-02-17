@@ -10,6 +10,8 @@ public class StringBufferExample {
 
     sb.setLength(30);
 
+
+
     System.out.println(sb);
 
     // String str= sb.toString();
