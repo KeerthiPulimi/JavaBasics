@@ -1,6 +1,6 @@
 class Human {
-  private int age = 18;
-  private String name = "kee";
+  private int age;
+  private String name;
 
   public int getAge() {
     return age;
@@ -27,7 +27,7 @@ public class EncapsulationExample {
     Human obj = new Human();
     // obj.age = 11;
     // obj.name = "kee";
-    obj.setAge(21);
+    obj.setAge(23);
     obj.setName("pulimi kanaka keerthi");
 
     System.out.println(obj.getName() + ":" + obj.getAge());
