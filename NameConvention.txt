@@ -1,0 +1,8 @@
+camle casing
+
+
+class and internface - Calc , Runable
+variable and method - marks, show()
+constants - PIE ,BRAND
+ 
+
