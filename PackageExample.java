@@ -1,4 +1,4 @@
-import tools.Calc;
+import other.tools.Calc;
 
 public class PackageExample {
 

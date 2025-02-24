@@ -8,6 +8,11 @@ class A {
     System.out.println("in  int A");
   }
 
+  public void show() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'show'");
+  }
+
 }
 
 class B extends A {
