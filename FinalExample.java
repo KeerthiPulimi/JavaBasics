@@ -30,6 +30,11 @@ public class FinalExample {
 
     // if you want to make any variable constant you can use final keyword
 
+    // final - method -- if you have same thod in parent class and in child class
+    // and when you create the new object with the and use that method the child
+    // class overides the parent class -- you cn use final keyword stop method
+    // overridding
+
     N obj = new N();
     obj.sshow();
     obj.add(4, 5);
