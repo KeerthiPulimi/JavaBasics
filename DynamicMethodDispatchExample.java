@@ -31,3 +31,7 @@ public class DynamicMethodDispatchExample {
     obj.show(); // Output: in C show (dynamic method dispatch)
   }
 }
+
+// Runtime polymorphism (method overriding and dynamic method dispatch) happens
+// when a method call is resolved at runtime based on the object being
+// referenced.
