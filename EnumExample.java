@@ -16,6 +16,7 @@ public class EnumExample {
     // }
 
     // Status a = Status.Pending;
+    System.out.println(s.getClass().getSuperclass());
 
     switch (s) {
       case Running:
