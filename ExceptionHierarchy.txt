@@ -1,0 +1,24 @@
+java.lang.Object  
+   └── java.lang.Throwable  
+       ├── java.lang.Error  
+       │   ├── VirtualMachineError (e.g., OutOfMemoryError, StackOverflowError)  
+       │   ├── AssertionError  
+       │   └── Other serious system errors  
+       │  
+       └── java.lang.Exception  
+           ├── java.lang.RuntimeException (Unchecked Exceptions)  
+           │   ├── ArithmeticException  
+           │   ├── NullPointerException  
+           │   ├── ArrayIndexOutOfBoundsException  
+           │   ├── IllegalArgumentException  
+           │   ├── ClassCastException  
+           │   ├── ConcurrentModificationException  
+           │   └── Other runtime issues  
+           │  
+           ├── Checked Exceptions (Must be handled)  
+           │   ├── IOException  
+           │   ├── SQLException  
+           │   ├── FileNotFoundException  
+           │   ├── InterruptedException  
+           │   ├── ParseException  
+           │   └── Other application-level issues  
