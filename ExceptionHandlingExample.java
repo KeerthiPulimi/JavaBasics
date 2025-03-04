@@ -1,19 +1,34 @@
+class KeerthiException extends Exception {
+  public KeerthiException(String string) {
+    super(string);
+
+  }
+}
+
 public class ExceptionHandlingExample {
   public static void main(String[] args) {
-    int i = 20;
+    int i = 18;
     int j = 0;
     int nums[] = new int[5];
     String str = null;
 
     try {
       j = 18 / i;
-      if (j == 0) {
-        throw new ArithmeticException("i dont want to print 0");
+      // if (j == 0) {
+      // throw new ArithmeticException("i dont want to print 0");
+      // }
+      // exception with throw keyword
+      if (j == 1) {
+        throw new KeerthiException("keerthi");
       }
-    } catch (ArithmeticException e) {
-      j = 18 / i;
-      System.out.println("thats the default " + e);
+    } catch (KeerthiException e) {
+      j = 18 / 1;
+      System.out.println("That's the default: " + e);
     }
+    // } catch (ArithmeticException e) {
+    // j = 18 / i;
+    // System.out.println("thats the default " + e);
+    // }
 
     // try {
     // System.out.println(str.length());
