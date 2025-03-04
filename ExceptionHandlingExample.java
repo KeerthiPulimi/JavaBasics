@@ -5,8 +5,33 @@ class KeerthiException extends Exception {
   }
 }
 
+class A {
+  public void show() throws ClassNotFoundException {
+    try {
+      Class.forName("Demo");
+    } catch (ClassNotFoundException e3) {
+      System.out.println("not able to find");
+
+    }
+
+  }
+}
+
 public class ExceptionHandlingExample {
+  static {
+    System.out.println("static");
+  }
+
   public static void main(String[] args) {
+
+    A obj = new A();
+    try {
+      obj.show();
+    } catch (ClassNotFoundException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+
     int i = 18;
     int j = 0;
     int nums[] = new int[5];
