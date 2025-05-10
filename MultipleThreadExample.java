@@ -1,30 +1,73 @@
-//if you want to make objects as threads just extend the class with threads
+//class A extends Thread
+// class A implements Runnable {
+//   public void run() {
+//     for (int i = 1; i <= 5; i++) {
+//       System.out.println("HI");
+//       try {
+//         Thread.sleep(10);
+//       } catch (InterruptedException e) {
+//         // TODO Auto-generated catch block
+//         e.printStackTrace();
+//       }
+//     }
+//   }
+// }
 
-class A extends Thread {
-  public void show() {
-    for (int i = 1; i <= 10; i++) {
-      System.out.println("HI");
-    }
-  }
-}
-
-class B extends Thread {
-  public void show() {
-    for (int i = 1; i <= 10; i++) {
-      System.out.println("Hello");
-    }
-  }
-}
+// class B extends Thread {
+//   public void run() {
+//     for (int i = 1; i <= 5; i++) {
+//       System.out.println("Hello");
+//       try {
+//         Thread.sleep(10);
+//       } catch (InterruptedException e) {
+//         // TODO Auto-generated catch block
+//         e.printStackTrace();
+//       }
+//     }
+//   }
+// }
 
 public class MultipleThreadExample {
   public static void main(String[] args) {
-    A obj1 = new A();
-    B obj2 = new B();
+    // Runnable obj1 = new A();
+    // Runnable obj2 = new B();
 
-    // obj1.show();
-    // obj2.show();
+    Runnable obj1 = () -> {
+      for (int i = 1; i <= 5; i++) {
+        System.out.println("HI");
+        try {
+          Thread.sleep(10);
+        } catch (InterruptedException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
 
-    obj1.start();
-    obj2.start();
+    };
+
+    Runnable obj2 = () -> {
+      for (int i = 1; i <= 5; i++) {
+        System.out.println("Hello");
+        try {
+          Thread.sleep(10);
+        } catch (InterruptedException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+
+    };
+
+    Thread t1 = new Thread(obj1);
+    Thread t2 = new Thread(obj2);
+
+    // System.out.println("Priority of obj1: " + obj1.getPriority());
+    // obj2.setPriority(Thread.MAX_PRIORITY);
+
+    // obj1.start(); // This now calls run()
+    // obj2.start(); // This now calls run()
+
+    t1.start();
+    t2.start();
   }
 }
